@@ -17,5 +17,7 @@ typedef struct __attribute__((packed)) {
 
 int serialize_header(const frame_header_t *in, frame_header_t *out);
 int deserialize_header(const frame_header_t *in, frame_header_t *out);
+int read_full(int fd, void *data, int size);
+int write_full(int fd, const void *data, int size);
 
 #endif
